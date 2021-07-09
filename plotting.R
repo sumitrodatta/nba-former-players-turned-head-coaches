@@ -36,7 +36,7 @@ coach_prev_player_by_team %>%
   theme(legend.position = "none") + 
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=0.5))
 
-ggsave("Number of Players Turned Coaches By Team.png")
+ggsave("Number of Players Turned Coaches By Team.png",width=12,height = 6,units="in")
 
 coach_prev_player_by_team %>% 
   ggplot(aes(x=reorder(tm,-percent_former_player),y=percent_former_player,
@@ -46,7 +46,7 @@ coach_prev_player_by_team %>%
   theme(legend.position = "none") + 
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=0.5))
 
-ggsave("Percent of Coaches Being Former Players By Team.png")
+ggsave("Percent of Coaches Being Former Players By Team.png",width=12,height = 6,units="in")
 
 coach_prev_player_by_team %>% 
   filter(tm %in% (players_as_coaches %>% filter(seas==2021) %>% pull(tm))) %>%
